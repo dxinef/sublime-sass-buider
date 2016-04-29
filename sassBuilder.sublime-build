@@ -1,7 +1,7 @@
 {
     "cmd": [ 
         "node", 
-        "$packages/sassBuilder/index.js",
+        "$packages/sublime-sass-builder/index.js",
         "$file",
         "${file_path}/${file_base_name}.css",
         "--compresse",
