@@ -1,10 +1,9 @@
 {
-  "name": "sublime-sass-buider",
+  "name": "sublime-sass-builder",
   "version": "0.0.1",
   "description": "将SASS/SCSS编译为CSS并使用autoprefixer处理",
   "main": "index.js",
   "dependencies": {
-    //"node-sass" : "^3.6.0",
     "autoprefixer": "^6.3.6"
   },
   "devDependencies": {},
@@ -12,5 +11,10 @@
     "test": "null"
   },
   "author": "dudaming",
-  "license": "MIT"
+  "license": "MIT",
+  "comments" : {
+    "dependencies": {
+        "node-sass" : "^3.6.0"
+      }
+  }
 }
