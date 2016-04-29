@@ -4,7 +4,7 @@
   "description": "将SASS/SCSS编译为CSS并使用autoprefixer处理",
   "main": "index.js",
   "dependencies": {
-    "node-sass" : "^3.6.0",
+    //"node-sass" : "^3.6.0",
     "autoprefixer": "^6.3.6"
   },
   "devDependencies": {},
