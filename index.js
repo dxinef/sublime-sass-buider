@@ -11,7 +11,7 @@ var args = process.argv.slice(2);
 var options = {
     inputfile : args[0],
     outputfile : args[1],
-    outputStyle : args.indexOf("--compresse") > -1 ? "compressed" : "expanded",
+    outputStyle : args.indexOf("--compress") > -1 ? "compressed" : "expanded",
     sourceMap : args.indexOf("--sourceMap") > -1 ? true : false
 };
 
@@ -60,7 +60,8 @@ sassParser && sassParser.render({
                       console.log("output \"", options.outputfile + ".map", "\" success");
                   }
               }
-          ).catch(function(error){
+          )
+          .catch(function(error){
             console.error('error:', error);
           });
     }
