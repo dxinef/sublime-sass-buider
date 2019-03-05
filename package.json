@@ -1,20 +1,17 @@
 {
   "name": "sublime-sass-builder",
-  "version": "0.0.1",
-  "description": "将SASS/SCSS编译为CSS并使用autoprefixer处理",
+  "version": "0.0.2",
+  "description": "将SASS/SCSS编译为CSS并使用postcss处理",
   "main": "index.js",
   "dependencies": {
-    "autoprefixer": "^6.3.6"
+    "autoprefixer": "^6.3.6",
+    "cssnano": "^4.1.10",
+    "postcss": "^5.0.19"
   },
   "devDependencies": {},
   "scripts": {
     "test": "null"
   },
   "author": "dudaming",
-  "license": "MIT",
-  "comments" : {
-    "dependencies": {
-        "node-sass" : "^3.6.0"
-      }
-  }
+  "license": "MIT"
 }

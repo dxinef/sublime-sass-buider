@@ -1,4 +1,4 @@
-### sublime-sass-buider 0.0.1 ###
+### sublime-sass-buider 0.0.2 ###
 1. 本插件实质是一个sublime build system，作用是编译sass，并经过autoprefixer处理，且生成sourcemap；
 2. 需要安装node，且全局安装node-sass（本地安装node-sass太大，而且libsass下载太慢）；
 3. git clone到本地后，运行npm install，安装依赖组件；
