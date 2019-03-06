@@ -1,6 +1,6 @@
 {
   "name": "sublime-sass-builder",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "将SASS/SCSS编译为CSS并使用postcss处理",
   "main": "index.js",
   "dependencies": {
