@@ -3,8 +3,7 @@ const promisify = require('util').promisify;
 const execSync = require('child_process').execSync;
 const writeFile = promisify(require("fs").writeFile);
 
-const NPM_PREFIX = execSync('npm prefix -g').toString().trim();
-const GLOBAL_MODULE_DIR = path.join(NPM_PREFIX, 'node_modules');
+const GLOBAL_MODULE_DIR = execSync('npm root -g').toString().trim();
 
 function requireGlobalModule(file) {
   return require(path.join(GLOBAL_MODULE_DIR, file));
