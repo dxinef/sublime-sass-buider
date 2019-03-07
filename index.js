@@ -1,15 +1,19 @@
-
+const path = require('path');
 const promisify = require('util').promisify;
 const execSync = require('child_process').execSync;
 const writeFile = promisify(require("fs").writeFile);
 
-let globalModulesPath = execSync('npm prefix -g').toString().replace(/\n/, '');
-globalModulesPath += process.platform === 'win32' ? '\\node_modules\\' : '\/node_modules\/';
+const NPM_PREFIX = execSync('npm prefix -g').toString().trim();
+const GLOBAL_MODULE_DIR = path.join(NPM_PREFIX, 'node_modules');
+
+function requireGlobalModule(file) {
+  return require(path.join(GLOBAL_MODULE_DIR, file));
+}
 
 const postcss = require('postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const sassParser = promisify(require(globalModulesPath + "node-sass").render);
+const sassParser = promisify(requireGlobalModule('node-sass').render);
 
 // argv
 var args = process.argv.slice(2);
@@ -20,7 +24,7 @@ var options = {
   sourceMap: args.indexOf("--sourcemap") > -1
 };
 if (!options.inputfile) {
-  console.log('no inpute file');
+  console.log('no input file');
   return;
 }
 
